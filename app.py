@@ -25,7 +25,6 @@ conn = psycopg2.connect(
     password=db_password
 )
 
-# Create a cursor object
 cursor = conn.cursor()
 
 create_table = """
@@ -39,7 +38,6 @@ CREATE TABLE users (
 
 cursor.execute(create_table)
 
-# Execute SQL statements to create tables and other database objects
 
 create_table_query = """
 INSERT INTO users (username, email, password_hash)
@@ -50,7 +48,6 @@ VALUES
 """
 cursor.execute(create_table_query)
 
-# Commit the changes and close the cursor and connection
 conn.commit()
 cursor.close()
 conn.close()
