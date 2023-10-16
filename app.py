@@ -46,7 +46,6 @@ INSERT INTO users (username, email, password_hash)
 VALUES
     ('jaideep_solania', 'jaideep2912@gmail.com', 'hashed_password'),
     ('hemant_sharma', 'hemantsw@gmail.com', 'another_hashed_password'),
-    -- Add more rows as needed
 ;
 """
 cursor.execute(create_table_query)
